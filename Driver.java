@@ -14,7 +14,7 @@ public class Driver {
 //		
 		Lock balanceLock = new ReentrantLock(); 
 		Wallet wallet = new Wallet(); 
-//		
+		
 		Thread miner1Thread = new Thread(new MinerThread(balanceLock, wallet)); 
 		
 		Thread miner2Thread = new Thread(new MinerThread(balanceLock, wallet)); 
@@ -23,6 +23,8 @@ public class Driver {
 		
 		
 		miner2Thread.start();
+		
+		
 		
 //		try {
 //			miner1Thread.join(); 
